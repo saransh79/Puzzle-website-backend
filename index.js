@@ -4,7 +4,7 @@ import {database} from './database/index.js'
 
 dotenv.config()
 database();
-const port = '4000' || process.env.PORT
+const port =  process.env.PORT || '4000'
 app.listen(port, () => {
     try {
         console.log(`Server is running at port ${port}`);

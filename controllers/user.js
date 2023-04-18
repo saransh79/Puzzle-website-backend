@@ -21,12 +21,12 @@ export const getScore = async (req, res) => {
         for (var i = 0; i < user.score.length; i++) {
             score += user.score[i].sc;
         }
-        const updatedUser= await User.updateOne({username: username},{
+        await User.updateOne({username: username},{
             $set: {
                 "totalScore": score
             }
         })
-        res.status(200).json(updatedUser);
+        res.status(200).json(score);
     } catch (error) {
         res.status(500).json({ error: error })
     }
