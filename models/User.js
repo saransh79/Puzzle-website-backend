@@ -32,10 +32,6 @@ const userSchema = new mongoose.Schema({
     totalScore: {
         type: Number,
         required : true,
-    },
-    rank: {
-        type : Number,
-        required: true
     }
 })
 
