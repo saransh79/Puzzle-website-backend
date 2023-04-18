@@ -28,6 +28,14 @@ const userSchema = new mongoose.Schema({
     profileChar: {
         type: Array,
         required: true
+    },
+    totalScore: {
+        type: Number,
+        required : true,
+    },
+    rank: {
+        type : Number,
+        required: true
     }
 })
 

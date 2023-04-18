@@ -1,8 +1,8 @@
 import express from 'express'
-import { getUsers } from '../controllers/user.js';
+import { deleteUser, getUsers } from '../controllers/user.js';
 
 const router= express.Router();
 
 router.get('/users', getUsers)
-
+router.post('/delete-user', deleteUser)
 export default router;

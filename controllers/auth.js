@@ -21,7 +21,9 @@ export const signup = async (req, res) => {
             email,
             score: [{ind: 1, sc: 0},{ind: 2, sc: 0},{ind: 3, sc: 0},{ind: 4, sc: 0},{ind: 5, sc: 0}],
             timeTaken: [{ind: 1, time: 0},{ind: 2, time: 0},{ind: 3, time: 0},{ind: 4, time: 0},{ind: 5, time: 0}],
-            profileChar: username[0].toUpperCase()
+            profileChar: username[0].toUpperCase(),
+            totalScore: 0,
+            rank: -1
         })
         const savedUser = await userData.save()
         res.status(200).json(savedUser)
